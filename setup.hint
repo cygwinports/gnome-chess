@@ -1,0 +1,9 @@
+category: Gnome Games
+requires: cygwin gdk-pixbuf gtk+ libglade libgnomecanvaspixbuf libzvt
+sdesc: "GNOME chess client"
+ldesc: "This is gnome-chess, a graphical user interface for playing chess.
+
+It works with chess programs and chess servers - it is also a PGN viewer.
+For chess programs, it works best with the chess engine crafty
+(ftp.cis.uab.edu/pub/hyatt) but most features should also work with
+GNU Chess (ftp.gnu.org)."
