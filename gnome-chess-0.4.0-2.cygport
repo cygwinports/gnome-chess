@@ -1,0 +1,21 @@
+inherit gnome2
+
+DESCRIPTION="GNOME chess game and PGN viewer"
+
+USE_MANAGED_MOUNT=1
+DIFF_EXCLUDES="acinclude.m4"
+
+src_compile() {
+	cd ${S}
+	rm -f acinclude.m4
+	gnome2_autoreconf
+
+	cd ${B}
+	gnome2_compile
+}
+
+src_install() {
+	cd ${B}
+	cyginstall 
+	make_managed_mount /usr/share/pixmaps/${PN}
+}
