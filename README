@@ -8,28 +8,33 @@ For chess programs, it works best with the chess engine crafty
 GNU Chess (ftp://ftp.gnu.org).
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  GConf2-2.16.0-1
-  gtk2-x11-2.10.6-1
-  libglade2-2.6.0-1
-  libgnomecanvas2-2.14.0-1
-  libgnomeui2-2.16.1-1
-  vte-0.14.1-1
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgdk_pixbuf2.0_0-2.16.0-1
+  libglade2.0_0-2.6.4-1
+  libglib2.0_0-2.20.0-1
+  libgnomecanvas2_0-2.26.0-1
+  libgnomeui2_0-2.24.1-1
+  libgtk2.0_0-2.16.0-1
+  libintl8-0.17-10
+  libpopt0-1.6.4-4
+  libvte9-0.20.0-1
+  libxml2-2.7.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.60-2
-  automake1.9-1.9.6-1
-  binutils-20060817-1
-  cygport-0.2.7-1
-  flex-2.5.33-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  intltool-0.35.1-1
-  make-3.81-1
-  pkg-config-0.21-1
-  sed-4.1.5-1
+  autoconf2.5-2.63-10
+  automake1.9-1.9.6-10
+  binutils-20080624-2
+  cygport-0.9.6-1
+  flex-2.5.35-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  intltool-0.40.6-1
+  make-3.81-2
+  pkg-config-0.23b-10
+  sed-4.1.5-2
 
 Canonical website:
   http://www.gnome.org/
@@ -53,20 +58,19 @@ This will create:
 -------------------------------------------
 
 Files included in the binary package:
+
   /etc/gconf/schemas/gnome-chess.schemas
-  /etc/postinstall/_usr_share_pixmaps_gnome-chess.tar.bz2
+  /etc/postinstall/gnome-chess_usr_share_pixmaps_gnome-chess.tar.bz2
   /etc/postinstall/gnome-chess.sh
   /etc/preremove/gnome-chess.sh
   /usr/bin/gnome-chess.exe
   /usr/share/applications/gnome-chess.desktop
-  /usr/share/doc/Cygwin/gnome-chess-0.4.0.README
-  /usr/share/doc/gnome-chess-0.4.0/AUTHORS
-  /usr/share/doc/gnome-chess-0.4.0/COPYING
-  /usr/share/doc/gnome-chess-0.4.0/ChangeLog
-  /usr/share/doc/gnome-chess-0.4.0/INSTALL
-  /usr/share/doc/gnome-chess-0.4.0/NEWS
-  /usr/share/doc/gnome-chess-0.4.0/README
-  /usr/share/doc/gnome-chess-0.4.0/TODO
+  /usr/share/doc/gnome-chess/AUTHORS
+  /usr/share/doc/gnome-chess/COPYING
+  /usr/share/doc/gnome-chess/ChangeLog
+  /usr/share/doc/gnome-chess/NEWS
+  /usr/share/doc/gnome-chess/README
+  /usr/share/doc/gnome-chess/TODO
   /usr/share/gnome-chess/glade/level.glade
   /usr/share/gnome-chess/glade/login.glade
   /usr/share/gnome-chess/glade/pgn.glade
@@ -116,14 +120,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 0.4.0-2 -----
-Rebuilt for vte-0.14.
-
------ version 0.4.0-1 -----
-New GNOME 2 version.
-
------ version 0.3.3-1 -----
-Initial release for Cygwin.
+----- version 0.4.0-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

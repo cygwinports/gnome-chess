@@ -1,5 +1,5 @@
 category: Gnome Games
-requires: cygwin GConf2 gtk2-x11 libglade2 libgnomecanvas2 libgnomeui2 vte
+requires: cygwin GConf2 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgnomecanvas2_0 libgnomeui2_0 libgtk2.0_0 libintl8 libpopt0 libvte9 libxml2
 sdesc: "GNOME chess client"
 ldesc: "This is gnome-chess, a graphical user interface for playing chess.
 

@@ -1,0 +1,34 @@
+inherit gnome2
+
+DESCRIPTION="GNOME chess game and PGN viewer"
+
+PATCH_URI="
+	http://patch-tracking.debian.net/patch/series/dl/${PN}/0.4.0-3/10_desktop_fixes.diff
+	http://patch-tracking.debian.net/patch/series/dl/${PN}/0.4.0-3/20_i18n.diff
+	http://patch-tracking.debian.net/patch/series/dl/${PN}/0.4.0-3/30_64bit.diff
+	http://patch-tracking.debian.net/patch/series/dl/${PN}/0.4.0-3/40_double_frees.diff
+	0.4.0-as-needed.patch
+"
+
+DISTCLEANFILES="acinclude.m4"
+
+prep_case_sensitive_dir() {
+	dodir /etc/postinstall /etc/preremove
+
+	for d in ${@}
+	do
+		(cd ${D}
+		 tar jcf etc/postinstall/${PN}${d//\//_}.tar.bz2 ${d#/}
+		 rm -fr ${d#/}
+		)
+
+		echo "tar jxf /etc/postinstall/${PN}${d//\//_}.tar.bz2 -C /" >> ${D}/etc/postinstall/${PN}.sh
+		echo "rm -fr ${d}" >> ${D}/etc/preremove/${PN}.sh
+	done
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+	prep_case_sensitive_dir /usr/share/pixmaps/${PN}
+}
