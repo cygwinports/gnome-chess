@@ -1,0 +1,11 @@
+--- origsrc/gnome-chess-3.8.3/src/gnome-chess.c	2013-06-09 22:51:41.000000000 -0500
++++ src/gnome-chess-3.8.3/src/gnome-chess.c	2013-08-07 23:35:08.872201800 -0500
+@@ -5549,7 +5549,7 @@ gboolean G_MODULE_EXPORT preferences_del
+ 	g_return_val_if_fail (widget != NULL, FALSE);
+ 	g_return_val_if_fail (event != NULL, FALSE);
+ 	_tmp0_ = widget;
+-	G_MODULE_EXPORT preferences_response_cb (_tmp0_, (gint) GTK_RESPONSE_CANCEL, self);
++	preferences_response_cb (_tmp0_, (gint) GTK_RESPONSE_CANCEL, self);
+ 	result = TRUE;
+ 	return result;
+ }
