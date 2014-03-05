@@ -1,3 +1,26 @@
+--- origsrc/gnome-chess-3.8.5/src/chess-engine.c	2014-01-20 12:55:04.000000000 -0600
++++ src/gnome-chess-3.8.5/src/chess-engine.c	2014-03-04 20:58:48.382299200 -0600
+@@ -4,8 +4,10 @@
+ 
+ #include <glib.h>
+ #include <glib-object.h>
++#ifdef G_OS_LINUX
+ #include "sys/prctl.h"
+ #include "linux/prctl.h"
++#endif
+ #include <signal.h>
+ #include <stdio.h>
+ #include <unistd.h>
+@@ -123,7 +125,9 @@ void chess_engine_process_input (ChessEn
+ 
+ 
+ static void ___lambda2_ (ChessEngine* self) {
++#ifdef G_OS_LINUX
+ 	prctl (PR_SET_PDEATHSIG, SIGTERM);
++#endif
+ }
+ 
+ 
 --- origsrc/gnome-chess-3.8.3/src/gnome-chess.c	2013-06-09 22:51:41.000000000 -0500
 +++ src/gnome-chess-3.8.3/src/gnome-chess.c	2013-08-07 23:35:08.872201800 -0500
 @@ -5549,7 +5549,7 @@ gboolean G_MODULE_EXPORT preferences_del
