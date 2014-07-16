@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gnome-chess"
-VERSION=3.10.3
+VERSION=3.10.4
 RELEASE=1
 CATEGORY="Games"
 SUMMARY="GNOME Chess game"
